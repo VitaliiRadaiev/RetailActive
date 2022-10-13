@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Retail Active</title>
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Montserrat:wght@300;400;500;700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		body.page-is-load ._preload-body {
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		body.page-is-load ._preload-body:before {
+			display: none;
+		}
+
+		._preload-body {
+			background-color: #fff;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 999;
+			-webkit-transition: all .6s ease .2s;
+			-o-transition: all .6s ease .2s;
+			transition: all .6s ease .2s;
+		}
+
+		._preload-body:before {
+			position: absolute;
+			content: '';
+			z-index: 999;
+			top: 50%;
+			left: 50%;
+			height: 50px;
+			width: 50px;
+			border-radius: 50%;
+			border: 4px solid #6e6e6e;
+			border-right: 4px solid #fff;
+			-webkit-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			-webkit-animation: preloadBody 2s linear infinite;
+			animation: preloadBody 2s linear infinite;
+		}
+
+		@-webkit-keyframes preloadBody {
+			from {
+				-webkit-transform: translate(-50%, -50%) rotate(0);
+				transform: translate(-50%, -50%) rotate(0);
+			}
+
+			to {
+				-webkit-transform: translate(-50%, -50%) rotate(360deg);
+				transform: translate(-50%, -50%) rotate(360deg);
+			}
+		}
+
+		@keyframes preloadBody {
+			from {
+				-webkit-transform: translate(-50%, -50%) rotate(0);
+				transform: translate(-50%, -50%) rotate(0);
+			}
+
+			to {
+				-webkit-transform: translate(-50%, -50%) rotate(360deg);
+				transform: translate(-50%, -50%) rotate(360deg);
+			}
+		}
+	</style>
+	
+<script src="js/vendors.js"></script>
+<script src="js/app.js"></script>
+<!-- <script
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7Q82l2QjSzJJk1uUW3OzUBGPTlbk8w1g&callback=initMap&libraries=&v=weekly"
+defer
+></script> -->
+</head>
+
+<body>
+	<div class="_preload-body"></div>
+	<!-- == TOP LINE ================== -->
+	<div class="main-wrapper">
+		<header class="header" data-header>
+    <div class="container header__body">
+        <div class="header__logo">
+            <a href="#">
+                <img src="img/logo/logo.svg" alt="">
+            </a>
+        </div>
+        <div class="header__menu menu">
+            <ul class="menu__list">
+                <li class="current-menu-item">
+                    <a href="#" class="menu__link">
+                        solutions
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="menu__link">
+                        services
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="menu__link">
+                        the company
+                    </a>
+                </li>
+                <li class="has-borders">
+                    <a href="#" class="menu__link">
+                        become a mystery shopper
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="menu__link">
+                        contact
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="menu__link">
+                        login
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="header__burger burger" data-action="open-mobile-menu">
+            <img src="img/icons/burger.svg" alt="">
+        </div>
+    </div>
+</header>
+
+<div class="mobile-menu" data-mobile-menu>
+    <div class="menu">
+        <div class="menu__head">
+            <div class="menu__logo">
+                <a href="#">
+                    <img src="img/logo/logo.svg" alt="">
+                </a>
+            </div>
+            <div class="menu__close" data-action="close-mobile-menu">
+                <img src="img/icons/close.svg" alt="">
+            </div>
+        </div>
+        <div class="menu__scroll-wrap">
+            <ul class="menu__list">
+                <li class="current-menu-item">
+                    <a href="#" class="menu__link">
+                        solutions
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="menu__link">
+                        services
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="menu__link">
+                        the company
+                    </a>
+                </li>
+                <li class="has-borders">
+                    <a href="#" class="menu__link">
+                        become a mystery shopper
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="menu__link">
+                        contact
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="menu__link">
+                        login
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+		<!-- == // TOP LINE ================== -->
+
+		<main class="_page home-page">
+			<section class="promo-header " data-full-min-height data-padding-top-header-size>
+    <div class="promo-header__bg">
+        <div class="promo-header__bg-img ibg">
+            <img src="img/photo/promo-header-bg-1.jpg" alt="">
+        </div>
+    </div>
+    <div class="promo-header__body container">
+        
+        
+            <div class="promo-header__text">We offer a blend of solutions that help brands assess and improve customer experience</div>
+        
+        
+            <a class="promo-header__btn btn-default btn-default--light" href="#">About us</a>
+        
+    </div>
+</section>
+
+			<section class="text-section padding-wrap text-section--with-img">
+				<div class="text-section__bg mix-blend-mode-difference">
+					<img src="img/photo/map.png" alt="">
+				</div>
+				<div class="text-section__body container-sm">
+					<h2 class="text-section__title title-2 text-center">
+						we have a global brand presence
+					</h2>
+					<div class="text-section__text text-content text-center">
+						<div class="text-section__text-row text-section__text-row-1 last text-lg">
+							<p>Retail Active are part of the Advantage Smollan Group. Through our global network of
+								businesses, we offer a range of marketing solutions for our clients as well as financial
+								stability.</p>
+						</div>
+						<div class="text-section__text-row text-section__text-row-2 last text-md">
+							<p>
+								We are a trusted and experienced Customer Experience Measurement Agency with core skills
+								in Auditing, Mystery Shopping, Customer Satisfaction Surveys and Consultancy. We deliver
+								improvements in profit, culture and compliance for our customers.
+							</p>
+						</div>
+					</div>
+					<div class="text-section__bottom">
+						<a href="#" class="text-section__btn">
+							<span class="btn-default">READ MORE</span>
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="services padding-wrap--md">
+    <div class="services__decor"></div>
+    <div class="services__body container-sm">
+        <h2 class="services__title title-2 text-center">OUR SERVICES</h2>
+        <div class="services__list swiper" data-slider="services-slider" data-mobile="false">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="#" class="services-card">
+                        <div class="services-card__img ibg">
+                            <img src="img/photo/services-card-img-1.jpg" alt="">
+                        </div>
+                        <div class="services-card__body">
+                            <h4 class="services-card__title title-4">
+                                Perfect Store
+                            </h4>
+                            <div class="services-card__text text">
+                                Understand how your shoppers perceive your brand and your competitor’s brands in store
+                                and online. Our perfect store scoring methodology attributes scoring to brand presence
+                                and promotion highlighting opportunities to improve as well as reward.
+                            </div>
+                            <button class="services-card__btn link">
+                                Learn More
+                                <img src="img/icons/arrow-right.svg" alt="">
+                            </button>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="services-card">
+                        <div class="services-card__img ibg">
+                            <img src="img/photo/services-card-img-2.jpg" alt="">
+                        </div>
+                        <div class="services-card__body">
+                            <h4 class="services-card__title title-4">
+                                Compliance
+                            </h4>
+                            <div class="services-card__text text">
+                                Audit your locations to check compliance against brand and franchise standards,
+                                processes, industry accreditations and legal requirements. Using our specialist team to
+                                audit sites or in house teams using our system, our reporting identifies issues and
+                                produces action plans.
+                            </div>
+                            <button class="services-card__btn link">
+                                Learn More
+                                <img src="img/icons/arrow-right.svg" alt="">
+                            </button>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="services-card">
+                        <div class="services-card__img ibg">
+                            <img src="img/photo/services-card-img-3.jpg" alt="">
+                        </div>
+                        <div class="services-card__body">
+                            <h4 class="services-card__title title-4">
+                                Brand Standards
+                            </h4>
+                            <div class="services-card__text text">
+                                Using our team of industry experts to audit compliance to brand or franchise standards
+                                and processes. Can also be deployed as self audits for use by in-house teams .
+                            </div>
+                            <button class="services-card__btn link">
+                                Learn More
+                                <img src="img/icons/arrow-right.svg" alt="">
+                            </button>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="services-card">
+                        <div class="services-card__img ibg">
+                            <img src="img/photo/services-card-img-4.jpg" alt="">
+                        </div>
+                        <div class="services-card__body">
+                            <h4 class="services-card__title title-4">
+                                Knowledge Bank
+                            </h4>
+                            <div class="services-card__text text">
+                                Consolidate all of your data into one place to save time and drive efficiency. This
+                                solution provides one drillable location for ease of use and the ability to link and
+                                compare sources.
+                            </div>
+                            <button class="services-card__btn link">
+                                Learn More
+                                <img src="img/icons/arrow-right.svg" alt="">
+                            </button>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="services-card">
+                        <div class="services-card__img ibg">
+                            <img src="img/photo/services-card-img-5.jpg" alt="">
+                        </div>
+                        <div class="services-card__body">
+                            <h4 class="services-card__title title-4">
+                                Mystery Shopping
+                            </h4>
+                            <div class="services-card__text text">
+                                Provides a consistent measure of customer experience through enactment of scenarios. Can
+                                compare experience between regions and retailers as well as in store, online and through
+                                home delivery.
+                            </div>
+                            <button class="services-card__btn link">
+                                Learn More
+                                <img src="img/icons/arrow-right.svg" alt="">
+                            </button>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="services-card">
+                        <div class="services-card__img ibg">
+                            <img src="img/photo/services-card-img-6.jpg" alt="">
+                        </div>
+                        <div class="services-card__body">
+                            <h4 class="services-card__title title-4">
+                                Satisfaction Surveys
+                            </h4>
+                            <div class="services-card__text text">
+                                Understand satisfaction vs expectation with your products or services. Gather positive
+                                and negative perceptions to improve your marketing efforts and strategy. Keep a pulse on
+                                how your customers or your employees are feeling and make improvements to drive sales,
+                                loyalty and reputation.
+                            </div>
+                            <button class="services-card__btn link">
+                                Learn More
+                                <img src="img/icons/arrow-right.svg" alt="">
+                            </button>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="services-card">
+                        <div class="services-card__img ibg">
+                            <img src="img/photo/services-card-img-7.jpg" alt="">
+                        </div>
+                        <div class="services-card__body">
+                            <h4 class="services-card__title title-4">
+                                Engagement Surveys
+                            </h4>
+                            <div class="services-card__text text">
+                                Understand how your teams feel about
+                                working for your business. Quickly identify issues and improvements to increase
+                                engagement and loyalty.
+                            </div>
+                            <button class="services-card__btn link">
+                                Learn More
+                                <img src="img/icons/arrow-right.svg" alt="">
+                            </button>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="services-card">
+                        <div class="services-card__img ibg">
+                            <img src="img/photo/services-card-img-8.jpg" alt="">
+                        </div>
+                        <div class="services-card__body">
+                            <h4 class="services-card__title title-4">
+                                Exit Survey and Focus Groups
+                            </h4>
+                            <div class="services-card__text text">
+                                Speak directly to customers and non-customers to gain qualitative data and in depth insights. Learn about their needs and perspectives on your brand as well as your competitior’s.
+                            </div>
+                            <button class="services-card__btn link">
+                                Learn More
+                                <img src="img/icons/arrow-right.svg" alt="">
+                            </button>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="services-card">
+                        <div class="services-card__img ibg">
+                            <img src="img/photo/services-card-img-9.jpg" alt="">
+                        </div>
+                        <div class="services-card__body">
+                            <h4 class="services-card__title title-4">
+                                Auditing
+                            </h4>
+                            <div class="services-card__text text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </div>
+                            <button class="services-card__btn link">
+                                Learn More
+                                <img src="img/icons/arrow-right.svg" alt="">
+                            </button>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="services-card">
+                        <div class="services-card__img ibg">
+                            <img src="img/photo/services-card-img-10.jpg" alt="">
+                        </div>
+                        <div class="services-card__body">
+                            <h4 class="services-card__title title-4">
+                                Consulting
+                            </h4>
+                            <div class="services-card__text text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </div>
+                            <button class="services-card__btn link">
+                                Learn More
+                                <img src="img/icons/arrow-right.svg" alt="">
+                            </button>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+
+			<section class="cards-text-section padding-wrap--md">
+				<div class="cards-text-section__decor">
+					<div class="cards-text-section__decor-body"></div>
+				</div>
+				<div class="cards-text-section__body container">
+					<div class="cards-text-section__col-1">
+						<ul class="cards-text-section__list">
+							<li>
+								<a class="card" href="#">
+									<div class="card__icon">
+										<img class="img-svg" src="img/icons/message.svg" alt="">
+									</div>
+									<h3 class="card__title title-3">Automotive</h3>
+									<div class="card__text text">
+										We have over 12 years’ experience working with the UK’s leading motor industry
+										manufacturers. We operate ongoing programmes on behalf of premium and mass
+										market manufacturers, adding value and demonstrating an in-depth understanding
+										of their specific market needs. We conduct independent research across the
+										automotive industry, providing insights that are not available anywhere else.
+									</div>
+									<button class="card__link link">
+										Read More
+										<img class="img-svg" src="img/icons/arrow-right.svg" alt="">
+									</button>
+								</a>
+							</li>
+							<li>
+								<a class="card" href="#">
+									<div class="card__icon">
+										<img class="img-svg" src="img/icons/message.svg" alt="">
+									</div>
+									<h3 class="card__title title-3">Hospitality</h3>
+									<div class="card__text text">
+										We have over 12 years’ experience working with the UK’s leading motor industry
+										manufacturers. We operate ongoing programmes on behalf of premium and mass
+										market manufacturers, adding value and demonstrating an in-depth understanding
+										of their specific market needs. We conduct independent research across the
+										automotive industry, providing insights that are not available anywhere else.
+									</div>
+									<button class="card__link link">
+										Read More
+										<img class="img-svg" src="img/icons/arrow-right.svg" alt="">
+									</button>
+								</a>
+							</li>
+						</ul>
+						<ul class="cards-text-section__list">
+							<li>
+								<a class="card" href="#">
+									<div class="card__icon">
+										<img class="img-svg" src="img/icons/message.svg" alt="">
+									</div>
+									<h3 class="card__title title-3">
+										Retail
+									</h3>
+									<div class="card__text text">
+										We have over 12 years’ experience working with the UK’s leading motor industry
+										manufacturers. We operate ongoing programmes on behalf of premium and mass
+										market manufacturers, adding value and demonstrating an in-depth understanding
+										of their specific market needs. We conduct independent research across the
+										automotive industry, providing insights that are not available anywhere else.
+									</div>
+									<button class="card__link link">
+										Read More
+										<img class="img-svg" src="img/icons/arrow-right.svg" alt="">
+									</button>
+								</a>
+							</li>
+							<li>
+								<a class="card" href="#">
+									<div class="card__icon">
+										<img class="img-svg" src="img/icons/message.svg" alt="">
+									</div>
+									<h3 class="card__title title-3">
+										Specialist
+									</h3>
+									<div class="card__text text">
+										We have over 12 years’ experience working with the UK’s leading motor industry
+										manufacturers. We operate ongoing programmes on behalf of premium and mass
+										market manufacturers, adding value and demonstrating an in-depth understanding
+										of their specific market needs. We conduct independent research across the
+										automotive industry, providing insights that are not available anywhere else.
+									</div>
+									<button class="card__link link">
+										Read More
+										<img class="img-svg" src="img/icons/arrow-right.svg" alt="">
+									</button>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="cards-text-section__col-2">
+						<div class="cards-text-section__text-wrap">
+							<h2 class="cards-text-section__title title-2">
+								OUR AREAS OF EXPERTISE
+							</h2>
+							<div class="cards-text-section__text text">
+								Our services are designed to touch consumers at every point of the shopper journey. We
+								have the ability to implement our services across all trade channels.
+							</div>
+							<a href="#" class="btn-default btn-default--light">Retail Active</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="text-img-section padding-wrap">
+				<div class="text-img-section__body container-sm">
+					<div class="text-img-section__text-wrap">
+						<h2 class="text-img-section__title title-2">
+							always focussed on industry and group quality and compliance
+						</h2>
+						<div class="text-img-section__text text-content text last">
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+								incididunt ut labore et dolore magna aliqua.
+							</p>
+						</div>
+					</div>
+					<div class="text-img-section__img">
+						<img src="img/photo/logos.png" alt="">
+					</div>
+				</div>
+			</section>
+
+			<section class="banner banner--text-dark banner--cover-decor">
+				<div class="banner__bg">
+					<div class="banner__bg-img ibg">
+						<picture>
+							<source srcset="img/photo/banner-img-1.jpg" media="(min-width: 768px)" >
+							<img src="img/photo/banner-img-1-mob.jpg" alt="img">
+						</picture>
+					</div>
+				</div>
+				<div class="banner__body container">
+					<div class="banner__text-wrap">
+						<div class="banner__text text-content text-lg">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultrices consectetur leo eu dignissim.
+						</div>
+						<a href="#" class="banner__btn btn-default btn-default--dark">Retail Active</a>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- == FOOTER ================== -->
+		<footer class="footer">
+    <div class="container">
+        <div class="footer__body">
+            <div class="footer__col footer__col-1">
+                <a href="" class="footer__title">Retail Active</a>
+                <ul class="footer__contact">
+                    <li>
+                        <div class="footer__contact-icon">
+                            <img src="img/icons/marker.svg" alt="">
+                        </div>
+                        <div class="footer__contact-text">
+                            6 Library Avenue <br>
+                            Harwell <br>
+                            Oxfordshire <br>
+                            OX11 0SG
+                        </div>
+                    </li>
+                    <li>
+                        <div class="footer__contact-icon">
+                            <img src="img/icons/mail.svg" alt="">
+                        </div>
+                        <div class="footer__contact-text">
+                            <a href="#" class="text-decoration-underline">info@retailactive.com</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="footer__contact-icon">
+                            <img src="img/icons/phone.svg" alt="">
+                        </div>
+                        <div class="footer__contact-text">
+                            <a href="#">01235 856 5757</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__col footer__col-2">
+                <a href="" class="footer__title" style="color: #F3A21B;">Solutions</a>
+                <ul class="footer__list">
+                    <li>
+                        <a href="#">Automotive</a>
+                    </li>
+                    <li>
+                        <a href="#">Retail</a>
+                    </li>
+                    <li>
+                        <a href="#">Food & Drink</a>
+                    </li>
+                    <li>
+                        <a href="#">Specialist</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__col footer__col-3">
+                <a href="" class="footer__title" style="color: #C4C018;">Services</a>
+            </div>
+            <div class="footer__col footer__col-4">
+                <a href="" class="footer__title" style="color: #ACABBB;">The Company</a>
+            </div>
+            <div class="footer__col footer__col-5">
+                <a href="" class="footer__title">
+                    Join a Newsletter
+                </a>
+                <div class="footer__form footer-form">
+                    <form action="/">
+                        <div class="footer-form__items">
+                            <div class="footer-form__item">
+                                <label for="" class="footer-form__label">Your Email</label>
+                                <input class="input" type="text" placeholder="Enter Your Email">
+                            </div>
+                            <div class="footer-form__item">
+                                <label for="" class="footer-form__label">Your Name</label>
+                                <input class="input" type="text" placeholder="Enter Your Name">
+                            </div>
+                        </div>
+                        <div class="footer-form__bottom">
+                            <button class="footer-form__submit btn-default">submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p><strong>Copyright REL</strong></p>
+            <p>Designed and Developed by Insites Digital</p>
+        </div>
+    </div>
+</footer>
+		<!-- == // FOOTER ================== -->
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/jQueryScripts.min.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"></script>
+</body>
+
+</html>

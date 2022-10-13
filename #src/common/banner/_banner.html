@@ -1,0 +1,21 @@
+<section class="banner @@mode">
+    <div class="banner__bg">
+        <div class="banner__bg-img ibg">
+            <img src="@@img" alt="">
+        </div>
+    </div>
+    <div class="banner__body container">
+        <div class="banner__text-wrap">
+            @@if(title) {
+                <h2 class="banner__title title-2">@@title</h2>
+            }
+            @@if(text) {
+                <div class="banner__text text-content @@textSize">@@text</div>
+            }
+
+            @@if(btnText) {
+                <a href="#" class="banner__btn btn-default @@btnMode">@@btnText</a>
+            }
+        </div>
+    </div>
+</section>

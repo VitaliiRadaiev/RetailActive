@@ -1,0 +1,199 @@
+.cards-text-section {
+    position: relative;
+    padding-bottom: 15.5rem;
+
+    @media (max-width: $md3+px) {
+        padding: 20px 0 114px;
+    }
+
+    &__decor {
+        position: absolute;
+        top: -30rem;
+        left: 0;
+        width: 100%;
+        height: calc(100% + 30rem);
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+
+        &:before {
+            content: "";
+            display: block;
+            height: 30rem;
+            margin-bottom: -0.5px;
+            background-color: $mainColor;
+            clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            height: 30rem;
+            margin-top: -0.5px;
+            background-color: $mainColor;
+            clip-path: polygon(0 0, 0% 100%, 100% 0);
+        }
+
+        @media (max-width: $md3+px) {
+            top: -95px;
+            height: calc(100% + 95px);
+
+            &:before {
+                height: 95px;
+            }
+
+            &::after {
+                height: 95px;
+            }
+        }
+    }
+
+    &__decor-body {
+        background-color: $mainColor;
+        flex: 1 1 auto;
+    }
+
+    &__body {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        gap: 4rem;
+
+        @media (max-width: $md3+px) {
+            flex-direction: column-reverse;
+            gap: 60px;
+        }
+    }
+
+    &__col-1 {
+        flex: 0 0 61.09%;
+        display: flex;
+        gap: 2rem;
+
+        @media (max-width: $md3+px) {
+            flex: 0 1 auto;
+            flex-direction: column;
+        }
+    }
+
+    &__col-2 {
+        flex: 1 1 auto;
+    }
+
+    &__list {
+        padding-left: 0;
+        margin-bottom: 0;
+        flex: 0 1 calc(50% - 1rem);
+
+        @media (min-width: 768px) {
+            &:first-child {
+                margin-top: 12.4rem;
+    
+                & > li {
+                    &:nth-child(even) {
+                        & .card {
+                            background-color: $textColorThird;
+                        }
+    
+                        & .card__icon, & .card__title, & .card__link {
+                            color: $textColorLight;
+                        }
+                    }
+                }
+            }
+    
+            &:last-child {
+                & > li {
+                    &:nth-child(odd) {
+                        & .card {
+                            background-color: $textColorThird;
+                        }
+    
+                        & .card__icon, & .card__title, & .card__link {
+                            color: $textColorLight;
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+        & > li {
+            &:not(:last-child) {
+                margin-bottom: 2rem;
+            }
+
+            @media (max-width: $md3+px) {
+                &:nth-child(even) {
+                    & .card {
+                        background-color: $textColorThird;
+                    }
+
+                    & .card__icon, & .card__title, & .card__link {
+                        color: $textColorLight;
+                    }
+                }
+            }
+        }
+    }
+    &__text-wrap {
+        color: $textColorLight;
+        width: 100%;
+        max-width: 32.7rem;
+        text-align: right;
+        margin-left: auto;
+
+        @media (max-width: $md3+px) {
+            text-align: left;
+        }
+
+        & > *:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__title {
+        margin-bottom: 3rem;
+    }
+
+    &__text {
+        margin-bottom: 5rem;
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 2.4rem;
+    gap: 2rem;
+    background: #ffffff;
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 0;
+    border: none;
+    opacity: 1 !important;
+
+    @media (max-width: $md3+px) {
+        padding: 20px 24px;
+        gap: 12px;
+    }
+
+    &__icon {
+        width: 5rem;
+
+        & img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__title {
+    }
+
+    &__text {
+    }
+
+    &__link {
+        color: $textColorThird;
+    }
+}

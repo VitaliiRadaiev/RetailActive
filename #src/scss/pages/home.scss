@@ -1,0 +1,38 @@
+.text-img-section {
+
+    &__body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 6rem;
+
+        @media (max-width: $md3+px) {
+            flex-direction: column;
+            gap: 24px;
+        }
+    }
+
+    &__text-wrap {
+        flex: 1 1 auto;
+        max-width: 36.4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+    }
+
+    &__title {
+    }
+
+    &__text {
+    }
+
+    &__img {
+        flex: 0 0 47.18%;
+
+        & img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+

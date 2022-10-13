@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('_head.html')
+
+<body>
+	<div class="_preload-body"></div>
+	<!-- == TOP LINE ================== -->
+	<div class="main-wrapper">
+		@@include('common/header/_header.html',{
+		"mod": ""
+		})
+		<!-- == // TOP LINE ================== -->
+
+		<main class="_page home-page">
+			@@include('common/promo-header/_promo-header.html', {
+				"title": false,
+				"text": "We offer a blend of solutions that help brands assess and improve customer experience",
+				"btnText": "About us",
+				"mode": "",
+				"bg": "img/photo/promo-header-bg-1.jpg"
+			})
+			<section class="text-section padding-wrap text-section--dark">
+				<div class="text-section__body container-sm">
+					<h2 class="text-section__title title-2 text-center">
+						who we are
+					</h2>
+					<div class="text-section__text text-content text-center">
+						<div class="text-section__text-row text-section__text-row-1 last text-lg">
+							<p>
+								We are a professional and experienced <strong>Customer Experience Measurement Agency,</strong> with core skills in <strong>Brand Auditing, Mystery Shopping & Training,</strong> delivering improvements in profit, culture & compliance for our clients.
+							</p>
+						</div>
+					</div>
+					<div class="text-section__bottom">
+						<a href="#" class="text-section__btn">
+							<span class="btn-default">R E L</span>
+						</a>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- == FOOTER ================== -->
+		@@include('common/footer/_footer.html',{})
+		<!-- == // FOOTER ================== -->
+	</div>
+	@@include('_js-bottom.html',{})
+</body>
+
+</html>

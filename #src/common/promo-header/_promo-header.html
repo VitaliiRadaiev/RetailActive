@@ -1,0 +1,18 @@
+<section class="promo-header @@mode" data-full-min-height data-padding-top-header-size>
+    <div class="promo-header__bg">
+        <div class="promo-header__bg-img ibg">
+            <img src="@@bg" alt="">
+        </div>
+    </div>
+    <div class="promo-header__body container">
+        @@if(title) {
+            <h1 class="promo-header__title title-1">@@title</h1>
+        }
+        @@if(text) {
+            <div class="promo-header__text">@@text</div>
+        }
+        @@if(btnText) {
+            <a class="promo-header__btn btn-default btn-default--light" href="#">@@btnText</a>
+        }
+    </div>
+</section>
