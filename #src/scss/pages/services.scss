@@ -1,0 +1,158 @@
+.services-list {
+    padding-left: 0;
+    margin-bottom: 0;
+
+    &:not(.services-list--first) {
+        & > li {
+            &:nth-child(odd) {
+                @media (min-width: 768px) {
+                    & .banner-second__body {
+                        flex-direction: row-reverse;
+                    }
+                }
+            }
+    
+            &:nth-child(4n + 1) {
+                & .banner-second__bg {
+                    background-color: #f2f2f5;
+    
+                    &:after {
+                        position: absolute;
+                        content: "";
+                        top: 0;
+                        right: 0;
+                        width: 15.625%;
+                        height: 100%;
+                        z-index: 2;
+                        background-color: #fff;
+                        clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+
+                        @media (max-width: $md3+px) {
+                            display: none;
+                        }
+                    }
+    
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+    
+            &:nth-child(4n + 2) {
+                color: $textColorLight;
+    
+                & .banner-second__bg {
+                    background-color: $mainColor;
+    
+                    &:after {
+                        display: none;
+                    }
+    
+                    &::before {
+                        position: absolute;
+                        content: "";
+                        top: 0;
+                        left: 0;
+                        width: 15.625%;
+                        height: 100%;
+                        z-index: 2;
+                        background-color: #acabbb;
+                        clip-path: polygon(0 0, 0% 100%, 100% 0);
+
+                        @media (max-width: $md3+px) {
+                            display: none;
+                        }
+                    }
+                }
+    
+                & .banner-second__link {
+                    &.btn-default {
+                        background-color: #fff;
+                        color: $textColor;
+    
+                        @media (max-width: $md2+px) {
+                            color: $textColor !important;
+                        }
+    
+                        @media (min-width: 992px) {
+                            &:hover {
+                                background-color: $hover;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+    
+            &:nth-child(4n + 3) {
+                & .banner-second__bg {
+                    &:after {
+                        position: absolute;
+                        content: "";
+                        top: 0;
+                        right: 0;
+                        width: 15.625%;
+                        height: 100%;
+                        z-index: 2;
+                        background-color: #f2f2f5;
+                        clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+
+                        @media (max-width: $md3+px) {
+                            display: none;
+                        }
+                    }
+    
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+    
+            &:nth-child(4n + 4) {
+                color: $textColorLight;
+    
+                & .banner-second__bg {
+                    background-color: #ACABBB;
+    
+                    &:after {
+                        display: none;
+                    }
+    
+                    &::before {
+                        position: absolute;
+                        content: "";
+                        top: 0;
+                        left: 0;
+                        width: 15.625%;
+                        height: 100%;
+                        z-index: 2;
+                        background-color: #F2F2F5;
+                        clip-path: polygon(0 0, 0% 100%, 100% 0);
+
+                        @media (max-width: $md3+px) {
+                            display: none;
+                        }
+                    }
+                }
+    
+                & .banner-second__link {
+                    &.btn-default {
+                        background-color: #fff;
+                        color: $textColor;
+    
+                        @media (max-width: $md2+px) {
+                            color: $textColor !important;
+                        }
+    
+                        @media (min-width: 992px) {
+                            &:hover {
+                                background-color: $hover;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

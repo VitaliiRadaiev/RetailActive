@@ -81,6 +81,7 @@
         @media (max-width: $md3+px) {
             padding-top: 20px;
             padding-bottom: 80px;
+            gap: 24px;
         }
     }
 
@@ -89,7 +90,7 @@
 
     &__text {
         width: 100%;
-        max-width: 42rem;
+        max-width: 63rem;
         font-size: 2.6rem;
         line-height: 5rem;
         letter-spacing: -0.011em;
@@ -99,13 +100,21 @@
         @media (max-width: $md3+px) {
             font-size: 18px;
             line-height: 26px;
-            max-width: 176px;
+            max-width: 200px;
         }
     }
 
     &__btn {
         @media (max-width: $md3+px) {
             margin-top: auto;
+        }
+    }
+
+    &--dark {
+        & .promo-header__bg {
+            &:after {
+                background: linear-gradient(0deg, #3E4A64 0%, rgba(62, 74, 100, 0.14) 100%);
+            }
         }
     }
 }

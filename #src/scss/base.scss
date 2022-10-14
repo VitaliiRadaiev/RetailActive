@@ -53,8 +53,8 @@ body {
 	-webkit-text-size-adjust: 100%;
 	color: $textColor;
 	font-weight: 400;
-	font-size: 1.6rem;
-	line-height: 1.5em;
+	font-size: 1.4rem;
+	line-height: 2.2rem;
 	transition: opacity 0.8s ease;
 	position: relative;
 	min-height: 100%;
@@ -157,8 +157,12 @@ h1,
 	margin-bottom: 0;
 	font-weight: 700;
 	font-size: 7rem;
-	line-height: 7em;
+	line-height: 1em;
 	text-transform: uppercase;
+
+	@media (max-width: $md3+px) {
+		font-size: 40px;
+	}
 }
 
 h2,
@@ -209,6 +213,21 @@ h5,
 	line-height: 1.1em;
 	margin-top: 0;
 	margin-bottom: 0;
+}
+
+.title-space-30 {
+	margin-bottom: 3rem !important;
+
+	@media (max-width: $md3+px) {
+		margin-bottom: 2.4rem !important;
+	}
+}
+.title-space-40 {
+	margin-bottom: 4rem !important;
+
+	@media (max-width: $md3+px) {
+		margin-bottom: 2.4rem !important;
+	}
 }
 
 p,
@@ -531,18 +550,10 @@ figure {
 	}
 
 	& ul {
-		padding-left: 3em;
-
-		@media (max-width: $md3+px) {
-			padding-left: 1.5em;
-		}
+		padding-left: 1.5em;
 
 		& > li {
 			list-style: disc;
-
-			&:not(:last-child) {
-				margin-bottom: 0.7em;
-			}
 
 			& > *:last-child {
 				margin-bottom: 0;
@@ -551,16 +562,9 @@ figure {
 	}
 
 	& ol {
-		padding-left: 3em;
-
-		@media (max-width: $md3+px) {
-			padding-left: 1.5em;
-		}
+		padding-left: 1.5em;
 
 		& > li {
-			&:not(:last-child) {
-				margin-bottom: 0.7em;
-			}
 
 			& > *:last-child {
 				margin-bottom: 0;

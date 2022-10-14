@@ -1,0 +1,29 @@
+<section class="banner-second @@mode">
+    <div class="banner-second__bg"></div>
+    <div class="banner-second__body container">
+        <div class="banner-second__img ibg">
+            <img src="@@img" alt="">
+        </div>
+        <div class="banner-second__text-wrap">
+            @@if(titleLg) {
+                <h2 class="banner-second__title-lg title-2">@@titleLg</h2>
+            }
+
+            @@if(titleSm) {
+                <h4 class="banner-second__title-sm title-4">@@titleSm</h4>
+            }
+
+            @@if(text) {
+                <div class="banner-second__text text last text-content">
+                    @@for (var i = 0; i < text.length; i++) {
+                        <p>`+text[i]+`</p>
+                    }
+                </div>
+            }
+
+            @@if(btnText) {
+                <a class="banner-second__link btn-default" href="#">@@btnText</a>
+            }
+        </div>
+    </div>
+</section>

@@ -59,6 +59,7 @@ class App {
 	slidersInit() {
 		@@include('../common/carousel/carousel.js');
 		@@include('../common/services/services.js');
+		@@include('../common/testimonials/testimonials.js');
 	}
 
 
@@ -257,6 +258,7 @@ class App {
 
 	componentsBeforeLoad() {
 		@@include('../common/promo-header/promo-header.js');
+		@@include('../common/rating/rating.js');
 	}
 
 	componentsAfterLoad() {

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('_head.html')
+
+<body>
+    <div class="_preload-body"></div>
+    <!-- == TOP LINE ================== -->
+    <div class="main-wrapper">
+        @@include('common/header/_header.html',{
+        "mod": ""
+        })
+        <!-- == // TOP LINE ================== -->
+
+        <main class="_page">
+            @@include('common/promo-header/_promo-header.html', {
+            "title": "AUTOMOTIVE",
+            "text": "Working with over 20 Automotive Brands, our teams in the field and in the office have a wealth of automotive knowledge.",
+            "btnText": "About us",
+            "mode": "promo-header--dark",
+            "bg": "img/photo/promo-header-bg-2.jpg"
+            })
+
+            <section class="text-section padding-wrap--md text-section--second text-section--dark">
+                <div class="text-section__body container-sm">
+                    <h2 class="text-section__title title-2 text-center title-space-30">
+                        problems faced by the industry
+                    </h2>
+                    <div class="text-section__text text-content ">
+                        <div class="text-section__text-row text-section__text-row-1 last text-sm text-center">
+                            <p>
+                                Sharing best practice, we short cut the learning curve and set up meaningful and
+                                measurable programmes for our clients.
+                            </p>
+                        </div>
+                        <div class="text-section__text-row text-section__text-row-2 last text">
+                            <h4>Issue 1</h4>
+                            <ul>
+                                <li>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.
+                                </li>
+                                <li>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.
+                                </li>
+                                <li>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.
+                                </li>
+                            </ul>
+
+                            <h4>Issue 2</h4>
+                            <ul>
+                                <li>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.
+                                </li>
+                                <li>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.
+                                </li>
+                                <li>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.
+                                </li>
+                            </ul>
+
+                            <h4>Issue 3</h4>
+                            <ul>
+                                <li>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.
+                                </li>
+                                <li>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.
+                                </li>
+                                <li>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="three-col-banner">
+                <div class="three-col-banner__bg ibg">
+                    <img src="img/photo/three-col-banner-bg.jpg" alt="">
+                    <div class="three-col-banner__bg-line three-col-banner__bg-line--1"></div>
+                    <div class="three-col-banner__bg-line three-col-banner__bg-line--2"></div>
+                </div>
+                <div class="three-col-banner__body">
+                    <h2 class="three-col-banner__title text-center title-space-40">
+                        how we address these challenges
+                    </h2>
+                    <ul class="three-col-banner__list">
+                        <li>
+                            <div class="three-col-banner__item-title title-4">
+                                Solution to Issue 1
+                            </div>
+                            <div class="three-col-banner__text text-second">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </div>
+                            <a href="#" class="three-col-banner__link btn-default">
+                                Learn more
+                            </a>
+                        </li>
+                        <li>
+                            <div class="three-col-banner__item-title title-4">
+                                Solution to Issue 2
+                            </div>
+                            <div class="three-col-banner__text text-second">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </div>
+                            <a href="#" class="three-col-banner__link btn-default">
+                                Learn more
+                            </a>
+                        </li>
+                        <li>
+                            <div class="three-col-banner__item-title title-4">
+                                Solution to Issue 3
+                            </div>
+                            <div class="three-col-banner__text text-second">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </div>
+                            <a href="#" class="three-col-banner__link btn-default">
+                                Learn more
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            @@include('common/testimonials/_testimonials.html')
+
+            @@include('common/banner-second/_banner-second.html', {
+                "mode": "padding-wrap--md",
+                "img": "img/photo/dots.png",
+                "titleLg": "company name case study",
+                "titleSm": false,
+                "text": [
+                'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+                'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci veli.',
+                'Sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.'
+                ],
+                "btnText": "View case study",
+            })
+
+            @@include('common/banner/_banner.html', {
+                "mode": "",
+                "img": "img/photo/banner-img-2.jpg",
+                "title": "like to know more?",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit Consectetur adipiscing elit.",
+                "btnText": "get in touch"
+            })
+        </main>
+
+        <!-- == FOOTER ================== -->
+        @@include('common/footer/_footer.html',{})
+        <!-- == // FOOTER ================== -->
+    </div>
+    @@include('_js-bottom.html',{})
+</body>
+
+</html>

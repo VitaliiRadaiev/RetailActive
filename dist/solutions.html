@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Retail Active</title>
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Montserrat:wght@300;400;500;700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		body.page-is-load ._preload-body {
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		body.page-is-load ._preload-body:before {
+			display: none;
+		}
+
+		._preload-body {
+			background-color: #fff;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 999;
+			-webkit-transition: all .6s ease .2s;
+			-o-transition: all .6s ease .2s;
+			transition: all .6s ease .2s;
+		}
+
+		._preload-body:before {
+			position: absolute;
+			content: '';
+			z-index: 999;
+			top: 50%;
+			left: 50%;
+			height: 50px;
+			width: 50px;
+			border-radius: 50%;
+			border: 4px solid #6e6e6e;
+			border-right: 4px solid #fff;
+			-webkit-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			-webkit-animation: preloadBody 2s linear infinite;
+			animation: preloadBody 2s linear infinite;
+		}
+
+		@-webkit-keyframes preloadBody {
+			from {
+				-webkit-transform: translate(-50%, -50%) rotate(0);
+				transform: translate(-50%, -50%) rotate(0);
+			}
+
+			to {
+				-webkit-transform: translate(-50%, -50%) rotate(360deg);
+				transform: translate(-50%, -50%) rotate(360deg);
+			}
+		}
+
+		@keyframes preloadBody {
+			from {
+				-webkit-transform: translate(-50%, -50%) rotate(0);
+				transform: translate(-50%, -50%) rotate(0);
+			}
+
+			to {
+				-webkit-transform: translate(-50%, -50%) rotate(360deg);
+				transform: translate(-50%, -50%) rotate(360deg);
+			}
+		}
+	</style>
+	
+<script src="js/vendors.js"></script>
+<script src="js/app.js"></script>
+<!-- <script
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7Q82l2QjSzJJk1uUW3OzUBGPTlbk8w1g&callback=initMap&libraries=&v=weekly"
+defer
+></script> -->
+</head>
+
+<body>
+    <div class="_preload-body"></div>
+    <!-- == TOP LINE ================== -->
+    <div class="main-wrapper">
+        <header class="header" data-header>
+    <div class="container header__body">
+        <div class="header__logo">
+            <a href="#">
+                <img src="img/logo/logo.svg" alt="">
+            </a>
+        </div>
+        <div class="header__menu menu">
+            <ul class="menu__list">
+                <li class="current-menu-item">
+                    <a href="#" class="menu__link">
+                        solutions
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="menu__link">
+                        services
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="menu__link">
+                        the company
+                    </a>
+                </li>
+                <li class="has-borders">
+                    <a href="#" class="menu__link">
+                        become a mystery shopper
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="menu__link">
+                        contact
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="menu__link">
+                        login
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="header__burger burger" data-action="open-mobile-menu">
+            <img src="img/icons/burger.svg" alt="">
+        </div>
+    </div>
+</header>
+
+<div class="mobile-menu" data-mobile-menu>
+    <div class="menu">
+        <div class="menu__head">
+            <div class="menu__logo">
+                <a href="#">
+                    <img src="img/logo/logo.svg" alt="">
+                </a>
+            </div>
+            <div class="menu__close" data-action="close-mobile-menu">
+                <img src="img/icons/close.svg" alt="">
+            </div>
+        </div>
+        <div class="menu__scroll-wrap">
+            <ul class="menu__list">
+                <li class="current-menu-item">
+                    <a href="#" class="menu__link">
+                        solutions
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="menu__link">
+                        services
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="menu__link">
+                        the company
+                    </a>
+                </li>
+                <li class="has-borders">
+                    <a href="#" class="menu__link">
+                        become a mystery shopper
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="menu__link">
+                        contact
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="menu__link">
+                        login
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+        <!-- == // TOP LINE ================== -->
+
+        <main class="_page">
+            <section class="promo-header promo-header--dark" data-full-min-height data-padding-top-header-size>
+    <div class="promo-header__bg">
+        <div class="promo-header__bg-img ibg">
+            <img src="img/photo/promo-header-bg-2.jpg" alt="">
+        </div>
+    </div>
+    <div class="promo-header__body container">
+        
+            <h1 class="promo-header__title title-1">AUTOMOTIVE</h1>
+        
+        
+            <div class="promo-header__text">Working with over 20 Automotive Brands, our teams in the field and in the office have a wealth of automotive knowledge.</div>
+        
+        
+            <a class="promo-header__btn btn-default btn-default--light" href="#">About us</a>
+        
+    </div>
+</section>
+
+            <section class="text-section padding-wrap--md text-section--second text-section--dark">
+                <div class="text-section__body container-sm">
+                    <h2 class="text-section__title title-2 text-center title-space-30">
+                        problems faced by the industry
+                    </h2>
+                    <div class="text-section__text text-content ">
+                        <div class="text-section__text-row text-section__text-row-1 last text-sm text-center">
+                            <p>
+                                Sharing best practice, we short cut the learning curve and set up meaningful and
+                                measurable programmes for our clients.
+                            </p>
+                        </div>
+                        <div class="text-section__text-row text-section__text-row-2 last text">
+                            <h4>Issue 1</h4>
+                            <ul>
+                                <li>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.
+                                </li>
+                                <li>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.
+                                </li>
+                                <li>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.
+                                </li>
+                            </ul>
+
+                            <h4>Issue 2</h4>
+                            <ul>
+                                <li>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.
+                                </li>
+                                <li>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.
+                                </li>
+                                <li>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.
+                                </li>
+                            </ul>
+
+                            <h4>Issue 3</h4>
+                            <ul>
+                                <li>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.
+                                </li>
+                                <li>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.
+                                </li>
+                                <li>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="three-col-banner">
+                <div class="three-col-banner__bg ibg">
+                    <img src="img/photo/three-col-banner-bg.jpg" alt="">
+                    <div class="three-col-banner__bg-line three-col-banner__bg-line--1"></div>
+                    <div class="three-col-banner__bg-line three-col-banner__bg-line--2"></div>
+                </div>
+                <div class="three-col-banner__body">
+                    <h2 class="three-col-banner__title text-center title-space-40">
+                        how we address these challenges
+                    </h2>
+                    <ul class="three-col-banner__list">
+                        <li>
+                            <div class="three-col-banner__item-title title-4">
+                                Solution to Issue 1
+                            </div>
+                            <div class="three-col-banner__text text-second">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </div>
+                            <a href="#" class="three-col-banner__link btn-default">
+                                Learn more
+                            </a>
+                        </li>
+                        <li>
+                            <div class="three-col-banner__item-title title-4">
+                                Solution to Issue 2
+                            </div>
+                            <div class="three-col-banner__text text-second">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </div>
+                            <a href="#" class="three-col-banner__link btn-default">
+                                Learn more
+                            </a>
+                        </li>
+                        <li>
+                            <div class="three-col-banner__item-title title-4">
+                                Solution to Issue 3
+                            </div>
+                            <div class="three-col-banner__text text-second">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </div>
+                            <a href="#" class="three-col-banner__link btn-default">
+                                Learn more
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="testimonials padding-wrap--md">
+    <div class="testimonials__bg"></div>
+    <div class="testimonials__body container">
+        <h2 class="testimonials__title title-2 title-space-40">
+            What the automotive industry says about us
+        </h2>
+        <div class="testimonials__slider swiper" datta-slider="testimonials-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="testimonial-card">
+                        <h4 class="testimonial-card__title title-4">
+                            Testimonial 1
+                        </h4>
+                        <div class="testimonial-card__text text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Dolore magna aliqua.
+                        </div>
+                        <div class="testimonial-card__rating">
+                            <div class="rating" data-rating="4.5">
+    <div class="rating__stars rating__stars-1">
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+    </div>
+    <div class="rating__stars rating__stars-2">
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+    </div>
+</div>
+                        </div>
+                        <div class="testimonial-card__author">
+                            <div class="testimonial-card__author-img ibg">
+                                <img src="img/photo/avatar.jpg" alt="">
+                            </div>
+                            <div>
+                                <div class="testimonial-card__author-name">
+                                    Client Name
+                                </div>
+                                <div class="testimonial-card__author-position text">
+                                    Professional Title
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonial-card">
+                        <h4 class="testimonial-card__title title-4">
+                            Testimonial 2
+                        </h4>
+                        <div class="testimonial-card__text text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Dolore magna aliqua.
+                        </div>
+                        <div class="testimonial-card__rating">
+                            <div class="rating" data-rating="4.5">
+    <div class="rating__stars rating__stars-1">
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+    </div>
+    <div class="rating__stars rating__stars-2">
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+    </div>
+</div>
+                        </div>
+                        <div class="testimonial-card__author">
+                            <div class="testimonial-card__author-img ibg">
+                                <img src="img/photo/avatar.jpg" alt="">
+                            </div>
+                            <div>
+                                <div class="testimonial-card__author-name">
+                                    Client Name
+                                </div>
+                                <div class="testimonial-card__author-position text">
+                                    Professional Title
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonial-card">
+                        <h4 class="testimonial-card__title title-4">
+                            Testimonial 3
+                        </h4>
+                        <div class="testimonial-card__text text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Dolore magna aliqua.
+                        </div>
+                        <div class="testimonial-card__rating">
+                            <div class="rating" data-rating="4.5">
+    <div class="rating__stars rating__stars-1">
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+    </div>
+    <div class="rating__stars rating__stars-2">
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+    </div>
+</div>
+                        </div>
+                        <div class="testimonial-card__author">
+                            <div class="testimonial-card__author-img ibg">
+                                <img src="img/photo/avatar.jpg" alt="">
+                            </div>
+                            <div>
+                                <div class="testimonial-card__author-name">
+                                    Client Name
+                                </div>
+                                <div class="testimonial-card__author-position text">
+                                    Professional Title
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonial-card">
+                        <h4 class="testimonial-card__title title-4">
+                            Testimonial 4
+                        </h4>
+                        <div class="testimonial-card__text text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Dolore magna aliqua.
+                        </div>
+                        <div class="testimonial-card__rating">
+                            <div class="rating" data-rating="4.5">
+    <div class="rating__stars rating__stars-1">
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+    </div>
+    <div class="rating__stars rating__stars-2">
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+        <div class="rating__star">
+            <span class="icon-star-full"></span>
+        </div>
+    </div>
+</div>
+                        </div>
+                        <div class="testimonial-card__author">
+                            <div class="testimonial-card__author-img ibg">
+                                <img src="img/photo/avatar.jpg" alt="">
+                            </div>
+                            <div>
+                                <div class="testimonial-card__author-name">
+                                    Client Name
+                                </div>
+                                <div class="testimonial-card__author-position text">
+                                    Professional Title
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+
+            <section class="banner-second padding-wrap--md">
+    <div class="banner-second__bg"></div>
+    <div class="banner-second__body container">
+        <div class="banner-second__img ibg">
+            <img src="img/photo/dots.png" alt="">
+        </div>
+        <div class="banner-second__text-wrap">
+            
+                <h2 class="banner-second__title-lg title-2">company name case study</h2>
+            
+
+            
+
+            
+                <div class="banner-second__text text last text-content">
+                    
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                    
+                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci veli.</p>
+                    
+                        <p>Sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
+                    
+                </div>
+            
+
+            
+                <a class="banner-second__link btn-default" href="#">View case study</a>
+            
+        </div>
+    </div>
+</section>
+
+            <section class="banner ">
+    <div class="banner__bg">
+        <div class="banner__bg-img ibg">
+            <img src="img/photo/banner-img-2.jpg" alt="">
+        </div>
+    </div>
+    <div class="banner__body container">
+        <div class="banner__text-wrap">
+            
+                <h2 class="banner__title title-2">like to know more?</h2>
+            
+            
+                <div class="banner__text text-content Lorem ipsum dolor sit amet, consectetur adipiscing elit Consectetur adipiscing elit.Size">Lorem ipsum dolor sit amet, consectetur adipiscing elit Consectetur adipiscing elit.</div>
+            
+
+            
+                <a href="#" class="banner__btn btn-default @@btnMode">get in touch</a>
+            
+        </div>
+    </div>
+</section>
+        </main>
+
+        <!-- == FOOTER ================== -->
+        <footer class="footer">
+    <div class="container">
+        <div class="footer__body">
+            <div class="footer__col footer__col-1">
+                <a href="" class="footer__title">Retail Active</a>
+                <ul class="footer__contact">
+                    <li>
+                        <div class="footer__contact-icon">
+                            <img src="img/icons/marker.svg" alt="">
+                        </div>
+                        <div class="footer__contact-text">
+                            6 Library Avenue <br>
+                            Harwell <br>
+                            Oxfordshire <br>
+                            OX11 0SG
+                        </div>
+                    </li>
+                    <li>
+                        <div class="footer__contact-icon">
+                            <img src="img/icons/mail.svg" alt="">
+                        </div>
+                        <div class="footer__contact-text">
+                            <a href="#" class="text-decoration-underline">info@retailactive.com</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="footer__contact-icon">
+                            <img src="img/icons/phone.svg" alt="">
+                        </div>
+                        <div class="footer__contact-text">
+                            <a href="#">01235 856 5757</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__col footer__col-2">
+                <a href="" class="footer__title" style="color: #F3A21B;">Solutions</a>
+                <ul class="footer__list">
+                    <li>
+                        <a href="#">Automotive</a>
+                    </li>
+                    <li>
+                        <a href="#">Retail</a>
+                    </li>
+                    <li>
+                        <a href="#">Food & Drink</a>
+                    </li>
+                    <li>
+                        <a href="#">Specialist</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__col footer__col-3">
+                <a href="" class="footer__title" style="color: #C4C018;">Services</a>
+            </div>
+            <div class="footer__col footer__col-4">
+                <a href="" class="footer__title" style="color: #ACABBB;">The Company</a>
+            </div>
+            <div class="footer__col footer__col-5">
+                <a href="" class="footer__title">
+                    Join a Newsletter
+                </a>
+                <div class="footer__form footer-form">
+                    <form action="/">
+                        <div class="footer-form__items">
+                            <div class="footer-form__item">
+                                <label for="" class="footer-form__label">Your Email</label>
+                                <input class="input" type="text" placeholder="Enter Your Email">
+                            </div>
+                            <div class="footer-form__item">
+                                <label for="" class="footer-form__label">Your Name</label>
+                                <input class="input" type="text" placeholder="Enter Your Name">
+                            </div>
+                        </div>
+                        <div class="footer-form__bottom">
+                            <button class="footer-form__submit btn-default">submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p><strong>Copyright REL</strong></p>
+            <p>Designed and Developed by Insites Digital</p>
+        </div>
+    </div>
+</footer>
+        <!-- == // FOOTER ================== -->
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/jQueryScripts.min.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"></script>
+</body>
+
+</html>
