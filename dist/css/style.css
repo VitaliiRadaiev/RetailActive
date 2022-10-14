@@ -3681,6 +3681,7 @@ figure {
 .services-list {
   padding-left: 0;
   margin-bottom: 0;
+  color: #2a3649;
 }
 
 .services-list:not(.services-list--first) > li:nth-child(4n+1) .banner-second__bg {
@@ -3756,7 +3757,7 @@ figure {
 }
 
 .services-list:not(.services-list--first) > li:nth-child(4n+4) .banner-second__bg {
-  background-color: #ACABBB;
+  background-color: #acabbb;
 }
 
 .services-list:not(.services-list--first) > li:nth-child(4n+4) .banner-second__bg:after {
@@ -3771,7 +3772,7 @@ figure {
   width: 15.625%;
   height: 100%;
   z-index: 2;
-  background-color: #F2F2F5;
+  background-color: #f2f2f5;
   -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
           clip-path: polygon(0 0, 0% 100%, 100% 0);
 }
@@ -3779,6 +3780,12 @@ figure {
 .services-list:not(.services-list--first) > li:nth-child(4n+4) .banner-second__link.btn-default {
   background-color: #fff;
   color: #3E4A64;
+}
+
+.services-list .banner-second__text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
 }
 
 @media (min-width: 576px) {
