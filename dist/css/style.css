@@ -2583,7 +2583,7 @@ figure {
 
 .promo-header__text {
   width: 100%;
-  max-width: 63rem;
+  max-width: 48rem;
   font-size: 2.6rem;
   line-height: 5rem;
   letter-spacing: -0.011em;
@@ -2708,6 +2708,10 @@ figure {
 .text-section--dark {
   background-color: #3E4A64;
   color: #fff;
+}
+
+.text-section--dark .text-section__body {
+  max-width: 105rem !important;
 }
 
 .text-section--dark .text-section__btn .btn-default {
@@ -3658,6 +3662,12 @@ figure {
 .banner-second--dark .banner-second__link.btn-default {
   background-color: #fff;
   color: #3E4A64;
+}
+
+.banner-second--text-second .banner-second__text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
 }
 
 .hero {

@@ -145,6 +145,10 @@
         background-color: $mainColor;
         color: $textColorLight;
 
+        & .text-section__body {
+            max-width: 105rem !important;
+        }
+
         & .text-section__btn {
             & .btn-default {
                 background-color: $mainColor;
