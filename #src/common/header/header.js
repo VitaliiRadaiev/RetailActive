@@ -16,7 +16,7 @@
         })
 
         window.addEventListener('scroll', () => {
-            header.classList.toggle('is-scroll', window.pageYOffset > 50);
+            header.classList.toggle('is-scroll', window.pageYOffset > 100);
         })
 
 

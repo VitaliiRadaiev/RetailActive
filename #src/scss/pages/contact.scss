@@ -1,0 +1,9 @@
+.map {
+    background-color: $secondColor;
+    height: calc(100vh - 9rem);
+    max-height: 71.5rem;
+
+    @media (max-width: $md3+px) {
+        height: calc(100vh - 48px);
+    }
+}

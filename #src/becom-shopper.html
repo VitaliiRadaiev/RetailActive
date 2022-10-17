@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('_head.html')
+
+<body>
+    <div class="_preload-body"></div>
+    <!-- == TOP LINE ================== -->
+    <div class="main-wrapper">
+        @@include('common/header/_header.html',{
+        "mod": ""
+        })
+        <!-- == // TOP LINE ================== -->
+
+        <main class="_page">
+            @@include('common/hero/_hero.html', {
+                "mode": "",
+                "titleLg": false,
+                "titleSm": "do you want to become a shopper?",
+                "text": false
+            })
+
+
+            @@include('common/banner-second/_banner-second.html', {
+                "mode": "padding-wrap--lg",
+                "img": "img/photo/banner-second-img-13.jpg",
+                "titleLg": "WHAT IS MYSTERY SHOPPING?",
+                "titleSm": false,
+                "text": [
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+                'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+                ],
+                "btnText": "SIGN UP"
+            })
+            @@include('common/banner-second/_banner-second.html', {
+                "mode": "padding-wrap--lg banner-second--revers",
+                "img": "img/photo/banner-second-img-14.jpg",
+                "titleLg": "WANT TO BECOME AN AUTOMOTIVE AUDITOR?",
+                "titleSm": false,
+                "text": [
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+                'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+                ],
+                "btnText": "SIGN UP"
+            })
+
+            <section class="cta padding-wrap--md">
+                <div class="cta__bg"></div>
+                <div class="cta__body container">
+                    <h2 class="cta__title title-2 text-center">
+                        technical difficulties?
+                    </h2>
+                    <form action="/">
+                        <div class="cta__form form">
+                            <div class="form__items">
+                                <div class="form__item form__item--half">
+                                    <input type="text" class="input" placeholder="Name">
+                                </div>
+                                <div class="form__item form__item--half" data-mask="9{*}">
+                                    <input type="text" class="input" placeholder="Telephone">
+                                </div>
+                                <div class="form__item form__item--half">
+                                    <input type="text" class="input" placeholder="Company Name">
+                                </div>
+                                <div class="form__item form__item--half">
+                                    <input type="email" class="input" placeholder="Email">
+                                </div>
+                                <div class="form__item">
+                                    <textarea class="textarea" placeholder="Message"></textarea>
+                                </div>
+                            </div>
+                            <div class="form__bottom">
+                                <button type="submit" class="form__submit btn-default btn-default--dark">
+                                    SEND
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!-- == FOOTER ================== -->
+        @@include('common/footer/_footer.html',{})
+        <!-- == // FOOTER ================== -->
+    </div>
+    @@include('_js-bottom.html',{})
+</body>
+
+</html>

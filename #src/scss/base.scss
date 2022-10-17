@@ -304,6 +304,13 @@ figure {
 		padding: 55px 0;
 	}
 }
+.padding-wrap--lg {
+	padding: 13.6rem 0;
+
+	@media (max-width: $md3+px) {
+		padding: 55px 0;
+	}
+}
 
 .p-160 {
 	padding-top: 16rem;
@@ -374,7 +381,7 @@ figure {
 [data-padding-top-header-size] {
 	padding-top: 12.8rem;
 
-	@media (max-width: $md2+px) {
+	@media (max-width: $md3+px) {
 		padding-top: 48px;
 	}
 }

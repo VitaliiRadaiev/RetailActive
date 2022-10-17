@@ -88,36 +88,38 @@
         @media (min-width: 768px) {
             &:first-child {
                 margin-top: 12.4rem;
-    
+
                 & > li {
                     &:nth-child(even) {
                         & .card {
                             background-color: $textColorThird;
                         }
-    
-                        & .card__icon, & .card__title, & .card__link {
+
+                        & .card__icon,
+                        & .card__title,
+                        & .card__link {
                             color: $textColorLight;
                         }
                     }
                 }
             }
-    
+
             &:last-child {
                 & > li {
                     &:nth-child(odd) {
                         & .card {
                             background-color: $textColorThird;
                         }
-    
-                        & .card__icon, & .card__title, & .card__link {
+
+                        & .card__icon,
+                        & .card__title,
+                        & .card__link {
                             color: $textColorLight;
                         }
                     }
                 }
             }
         }
-
-
 
         & > li {
             &:not(:last-child) {
@@ -130,7 +132,9 @@
                         background-color: $textColorThird;
                     }
 
-                    & .card__icon, & .card__title, & .card__link {
+                    & .card__icon,
+                    & .card__title,
+                    & .card__link {
                         color: $textColorLight;
                     }
                 }
@@ -146,6 +150,7 @@
 
         @media (max-width: $md3+px) {
             text-align: left;
+            max-width: none;
         }
 
         & > *:last-child {
@@ -159,6 +164,90 @@
 
     &__text {
         margin-bottom: 5rem;
+
+        & > *:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &--second {
+        background-color: $secondColor;
+
+        @media (max-width: $md3+px) {
+            padding: 55px 0;
+        }
+        & .cards-text-section__decor {
+            display: none;
+        }
+
+        & .cards-text-section__list {
+            &:first-child {
+                margin-top: 12.4rem;
+
+                & > li {
+                    &:nth-child(even) {
+                        & .card {
+                            background-color: $mainColor;
+                        }
+
+                        & .card__icon,
+                        & .card__title,
+                        & .card__link,
+                        & .card__text {
+                            color: $textColorLight;
+                        }
+                    }
+                }
+            }
+
+            &:last-child {
+                & > li {
+                    &:nth-child(odd) {
+                        & .card {
+                            background-color: $mainColor;
+                        }
+
+                        & .card__icon,
+                        & .card__title,
+                        & .card__link,
+                        & .card__text {
+                            color: $textColorLight;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &--third {
+        background: #f2f2f5;
+
+        @media (max-width: $md3+px) {
+            padding: 55px 0;
+        }
+
+        & .cards-text-section__decor {
+            display: none;
+        }
+
+        & .cards-text-section__text-wrap {
+            color: $textColor;
+        }
+
+        & .cards-text-section__list {
+            & > li {
+                & .card {
+                    background-color: #fff !important;
+                }
+
+                & .card__icon,
+                & .card__title,
+                & .card__link,
+                & .card__text {
+                    color: $textColor !important;
+                }
+            }
+        }
     }
 }
 

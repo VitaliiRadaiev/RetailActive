@@ -60,7 +60,6 @@
     }
 
     &__text-wrap {
-        align-self: center;
         flex: 1 1 auto;
         display: flex;
         flex-direction: column;
@@ -87,6 +86,36 @@
                         color: #fff;
                     }
                 }
+            }
+        }
+    }
+
+    &--dark {
+        color: $textColorLight;
+        background-color: $mainColor;
+        & .banner-second__link {
+            &.btn-default {
+                background-color: #fff;
+                color: $textColor;
+
+                @media (max-width: $md2+px) {
+                    color: $textColor !important;
+                }
+
+                @media (min-width: 992px) {
+                    &:hover {
+                        background-color: $hover;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    &--revers {
+        @media (min-width: 768px) {
+            & .banner-second__body {
+                flex-direction: row-reverse;
             }
         }
     }
