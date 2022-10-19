@@ -2583,12 +2583,13 @@ figure {
 
 .promo-header__text {
   width: 100%;
-  max-width: 48rem;
+  max-width: 47rem;
   font-size: 2.6rem;
   line-height: 5rem;
   letter-spacing: -0.011em;
   color: #f5f7f9;
   font-family: "Montserrat", sans-serif;
+  font-weight: 300;
 }
 
 .promo-header--dark .promo-header__bg:after {
@@ -3849,11 +3850,9 @@ figure {
   position: relative;
   z-index: 2;
   color: #fff;
-  padding: 9rem 0 5rem;
 }
 
 .three-col-banner__list {
-  margin-top: 39.5rem;
   padding-left: 0;
   margin-bottom: 0;
   display: -webkit-box;
@@ -3875,19 +3874,25 @@ figure {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 33.3333333%;
           flex: 0 1 33.3333333%;
-  padding: 0 2rem;
+  padding: 9rem 2rem 5rem;
+  min-height: 76.8rem;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .three-col-banner__item-title {
   margin-bottom: 1.6rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
 }
 
 .three-col-banner__text {
   margin-bottom: 3rem;
-}
-
-.three-col-banner__link {
-  margin-top: auto;
 }
 
 .services-list {
@@ -4204,6 +4209,15 @@ figure {
             flex-direction: row-reverse;
   }
 
+  .three-col-banner__title {
+    position: absolute;
+    top: 8rem;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+    pointer-events: none;
+  }
+
   .services-list:not(.services-list--first) > li:nth-child(odd) .banner-second__body {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
@@ -4329,6 +4343,10 @@ figure {
   .banner-second--dark .banner-second__link.btn-default:hover {
     background-color: #ACABBB;
     color: #fff;
+  }
+
+  .three-col-banner__list > li:hover {
+    background-color: rgba(62, 74, 100, 0.5);
   }
 
   .services-list:not(.services-list--first) > li:nth-child(4n+2) .banner-second__link.btn-default:hover {
@@ -5064,6 +5082,8 @@ figure {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 auto;
             flex: 0 1 auto;
+    min-height: auto;
+    padding: 0 2rem;
   }
 
   .services-list:not(.services-list--first) > li:nth-child(4n+1) .banner-second__bg:after {

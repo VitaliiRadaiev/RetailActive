@@ -100,12 +100,13 @@
 
     &__text {
         width: 100%;
-        max-width: 48rem;
+        max-width: 47rem;
         font-size: 2.6rem;
         line-height: 5rem;
         letter-spacing: -0.011em;
         color: #f5f7f9;
         font-family: $secondFontFamily;
+        font-weight: 300;
 
         @media (max-width: $md3+px) {
             font-size: 18px;

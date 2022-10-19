@@ -260,9 +260,9 @@ class App {
 		@@include('../common/promo-header/promo-header.js');
 		@@include('../common/rating/rating.js');
 	}
-
+	
 	componentsAfterLoad() {
-
+		@@include('../common/three-col-banner/three-col-banner.js');
 	}
 
 }
