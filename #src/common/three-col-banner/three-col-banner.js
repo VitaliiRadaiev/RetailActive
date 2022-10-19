@@ -7,7 +7,9 @@
                 let link = li.querySelector('.three-col-banner__link');
                 if(link) {
                     li.addEventListener('click', () => {
-                        document.location.href = link.href;
+                        if(document.documentElement.clientWidth > 767.98) {
+                            document.location.href = link.href;
+                        }
                     })
                 }
             })
