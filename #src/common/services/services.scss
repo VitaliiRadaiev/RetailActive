@@ -1,6 +1,10 @@
 .services {
     position: relative;
 
+    @media (max-width: $md3+px) {
+        padding-bottom: 9rem;
+    }
+
     &__decor {
         position: absolute;
         top: 0;
