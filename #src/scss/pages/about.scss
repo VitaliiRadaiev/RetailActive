@@ -103,5 +103,11 @@
         & .testimonial-card__author {
             margin-top: auto;
         }
+
+        & .swiper-pagination {
+            @media (min-width: 768px) {
+                display: none !important;
+            }
+        }
     }
 }

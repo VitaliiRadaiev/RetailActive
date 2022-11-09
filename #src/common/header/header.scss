@@ -1,4 +1,3 @@
-
 .header {
     transition: all 0.4s ease;
     position: fixed;
@@ -65,19 +64,43 @@
         & .sub-menu {
             display: none;
             position: absolute;
-            top: 100%;
-            background-color: #fff;
-            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 2rem;
-            min-width: 100%;
-            margin-left: -1.6rem;
+            top: calc(100% + 2.8rem);
+            background-color: $mainColor;
+            border-radius: 1px;
+            min-width: 21.4rem;
             animation: subMenuAnim 0.4s ease;
-            overflow: hidden;
-            padding: 1.6rem;
+            padding: 2.4rem 1.2rem;
+            border: 1px solid #fff;
+
+            &:before {
+                position: absolute;
+                content: "";
+                top: 0;
+                left: 2rem;
+                transform: translateY(calc(-100% + 3px));
+                height: 1.4rem;
+                width: 1.4rem;
+                background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTguODY4MjQgMS41MTk0MkwxNS4xNDUxIDEyLjUwMzlDMTUuNTI2IDEzLjE3MDUgMTUuMDQ0NiAxNCAxNC4yNzY4IDE0SDEuNzIzMThDMC45NTUzNTcgMTQgMC40NzM5ODkgMTMuMTcwNSAwLjg1NDkzNiAxMi41MDM5TDcuMTMxNzYgMS41MTk0M0M3LjUxNTY1IDAuODQ3NjExIDguNDg0MzUgMC44NDc2MSA4Ljg2ODI0IDEuNTE5NDJaIiBmaWxsPSIjM0U0QTY0IiBzdHJva2U9IndoaXRlIi8+CjxwYXRoIGQ9Ik0wLjg4ODg4OSAxNEgwTDE2IDE0IiBzdHJva2U9IiMzRTRBNjQiIHN0cm9rZS13aWR0aD0iNCIvPgo8L3N2Zz4K");
+                background-position: center bottom;
+                background-repeat: no-repeat;
+                background-size: contain;
+                z-index: 2;
+            }
+
+            &:after {
+                position: absolute;
+                content: "";
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 2.8rem;
+                transform: translateY(-100%);
+                z-index: 1;
+            }
 
             & > li {
                 &:not(:last-child) {
-                    margin-bottom: 1.6rem;
+                    margin-bottom: 1.2rem;
                 }
             }
 
@@ -85,14 +108,18 @@
                 font-weight: 400;
                 display: block;
                 white-space: nowrap;
-                color: $textColor;
+                color: $textColorLight;
                 border-radius: 0;
                 padding: 0;
-                font-size: 1.6rem;
-                line-height: 1.5em;
+                font-size: 1.4rem;
+                line-height: 1.21em;
+                letter-spacing: 0.08em;
+                transition: all 0.3s ease;
+                text-transform: none;
 
                 @media (min-width: 992px) {
                     &:hover {
+                        opacity: 0.7 !important;
                     }
                 }
             }
@@ -105,7 +132,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        
 
         @media (min-width: 992px) {
             display: none;
@@ -115,7 +141,8 @@
             width: 24px;
         }
 
-        & img, & svg {
+        & img,
+        & svg {
             width: 100%;
             height: auto;
         }
@@ -151,7 +178,8 @@
             width: 24px;
         }
 
-        & img, & svg {
+        & img,
+        & svg {
             width: 100%;
             height: auto;
         }
@@ -200,7 +228,6 @@
 
         @media (max-width: $md2+px) {
             font-size: 1.8rem;
-            text-align: center;
         }
 
         @media (max-width: $md3+px) {
@@ -240,7 +267,7 @@
 
                         &:before {
                             position: absolute;
-                            content: '';
+                            content: "";
                             top: 50%;
                             left: 0;
                             transform: translateY(-50%);
@@ -256,7 +283,7 @@
 
                         &:after {
                             position: absolute;
-                            content: '';
+                            content: "";
                             top: 50%;
                             right: 0;
                             transform: translateY(-50%);
@@ -271,9 +298,9 @@
 
         & .sub-menu {
             @media (max-width: $md2+px) {
-                padding-left: 2rem;
                 display: none;
-                padding-top: 0.6rem;
+                padding-top: 0.8rem;
+                padding-left: 0;
 
                 & > li {
                     &:not(:last-child) {
@@ -286,9 +313,16 @@
                 &.current-menu-item,
                 &.current-menu-ancestor {
                     & > .menu__link {
-                        font-weight: 700;
-                        color: $secondColor;
+                        border-bottom: 1px solid #fff;
                     }
+                }
+
+                & > .menu__link {
+                    color: #ebe9e9;
+                    font-size: 14px;
+                    line-height: 20px;
+                    letter-spacing: 0.08em;
+                    text-transform: none;
                 }
             }
         }
@@ -309,24 +343,22 @@
         position: relative;
 
         @media (max-width: $md2+px) {
-            padding-right: 2.4rem;
-            display: block;
+            display: inline-block;
             &:before {
                 position: absolute;
                 content: "\e903";
                 top: 50%;
                 right: 0;
                 font-family: "icomoon";
-                transform: translateY(-50%);
+                transform: translateX(100%) translateY(-50%) scale(1, -1);
                 transition: all 0.3s ease;
-                font-size: 1em;
+                font-size: 1.5em;
             }
         }
 
         &.open {
-            color: $secondColor;
             &:before {
-                transform: translateY(-50%) scale(1, -1);
+                transform: translateX(100%) translateY(-50%) scale(1, 1);
             }
         }
     }
